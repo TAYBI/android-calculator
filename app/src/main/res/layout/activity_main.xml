@@ -53,12 +53,22 @@
                 android:textSize="28sp" />
 
             <Button
-                android:id="@+id/open_close"
+                android:id="@+id/open"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:height="60dp"
-                android:text="()"
+                android:text="("
+                android:textColor="@color/colorAccent"
+                android:textSize="28sp" />
+
+            <Button
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="60dp"
+                android:text=")"
                 android:textColor="@color/colorAccent"
                 android:textSize="28sp" />
 
@@ -253,4 +263,26 @@
         </TableRow>
 
     </TableLayout>
+
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:gravity="right"
+        android:padding="12dp"
+        android:text="TextView"
+        android:textSize="34sp" />
+
 </RelativeLayout>
