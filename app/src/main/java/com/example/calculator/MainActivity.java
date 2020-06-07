@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         result = (EditText)findViewById(R.id.result);
-
         result.setShowSoftInputOnFocus(false);
     }
 
