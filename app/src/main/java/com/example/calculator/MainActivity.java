@@ -31,9 +31,23 @@ public class MainActivity extends AppCompatActivity {
         print(button.getText().toString());
     }
 
+    public void clear(View view) {
+        result.setText("");
+    }
+
+    public void delete_last_num(View view) {
+        int pos = result.getSelectionEnd();
+        String text = result.getText().toString();
+        if(text.equals("") || pos == 0 )
+            return;
+        String str1 =  text.substring(0, pos - 1);
+        String str2 =  text.substring(pos, (int) text.length());
+        result.setText(str1 + str2);
+        result.setSelection(pos -1);
+    }
+
     void print(String str) {
         int pos = result.getSelectionEnd();
-
         String text = result.getText().toString();
 
         if(btn_is_num(str)){

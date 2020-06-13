@@ -35,6 +35,7 @@
                 android:drawableRight="@drawable/ic_backspace_black_24dp"
                 android:paddingRight="30dp"
                 android:textSize="17sp"
+                android:onClick="delete_last_num"
                 android:textColor="@color/colorAccent" />
         </TableRow>
 
@@ -49,6 +50,7 @@
                 android:layout_weight="1"
                 android:height="60dp"
                 android:text="c"
+                android:onClick="clear"
                 android:textColor="@color/colorAccent"
                 android:textSize="28sp" />
 
