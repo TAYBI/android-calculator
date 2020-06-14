@@ -270,7 +270,8 @@
                 android:backgroundTint="@color/colorAccent"
                 android:text="="
                 android:textColor="@color/white"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:onClick="btnEqual"/>
         </TableRow>
 
     </TableLayout>

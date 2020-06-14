@@ -5,26 +5,38 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import org.mariuszgromada.math.mxparser.*;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText result;
     TextView preview;
+    Button equal;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        equal = (Button)findViewById(R.id.equal);
         preview = (TextView)findViewById(R.id.preview);
         result = (EditText)findViewById(R.id.result);
         result.setShowSoftInputOnFocus(false);
     }
+
+    public void btnEqual(View view) {
+        String string = result.getText().toString();
+        Expression expression = new Expression(string);
+
+        String result_ = String.valueOf(expression.calculate());
+        preview.setText(result_);
+    }
+
 
     public void print_text(View view) {
         Button button = (Button)view;
