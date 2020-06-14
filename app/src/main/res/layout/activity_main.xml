@@ -17,14 +17,15 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/history"
+                android:id="@+id/clear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:height="60dp"
-                android:text="history"
-                android:textSize="17sp"
-                android:textColor="@color/colorAccent" />
+                android:onClick="clear"
+                android:text="c"
+                android:textColor="@color/colorAccent"
+                android:textSize="28sp" />
 
             <Button
                 android:id="@+id/delete"
@@ -33,26 +34,16 @@
                 android:layout_weight="1"
                 android:height="60dp"
                 android:drawableRight="@drawable/ic_backspace_black_24dp"
-                android:paddingRight="30dp"
-                android:textSize="17sp"
                 android:onClick="delete_last_num"
-                android:textColor="@color/colorAccent" />
+                android:paddingRight="30dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="28sp" />
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/clear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:height="60dp"
-                android:text="c"
-                android:onClick="clear"
-                android:textColor="@color/colorAccent"
-                android:textSize="28sp" />
 
             <Button
                 android:id="@+id/open"
@@ -299,7 +290,7 @@
         android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="155dp"
         android:gravity="right"
         android:padding="12dp"
         android:text="Preview"
