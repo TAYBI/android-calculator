@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
 
     EditText result;
     TextView preview;
-    Button equal;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -23,16 +22,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        equal = (Button)findViewById(R.id.equal);
         preview = (TextView)findViewById(R.id.preview);
         result = (EditText)findViewById(R.id.result);
         result.setShowSoftInputOnFocus(false);
     }
 
+    public void preview_to_reslt(View view) {
+        String string = preview.getText().toString();
+        if (string.equals("NaN"))
+            return;
+        else {
+            double f = Double.parseDouble(string);
+            String formattedString = String.format("%.02f", f);
+            result.setText(formattedString);
+            preview.setText("");
+        }
+    }
+
     public void btnEqual(View view) {
         String string = result.getText().toString();
         Expression expression = new Expression(string);
-
         String result_ = String.valueOf(expression.calculate());
         preview.setText(result_);
     }
@@ -71,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(btn_is_num(str)){
             if(text.length() > 15){
-                Toast.makeText(MainActivity.this, "le nombre maximum de chiffres est de 15",
+                Toast.makeText(this, "le nombre maximum de chiffres est de 15",
                         Toast.LENGTH_SHORT).show();
                 return;
             }
