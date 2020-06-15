@@ -4,6 +4,7 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.PhoneNumberUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,6 +37,24 @@ public class MainActivity extends AppCompatActivity {
             String formattedString = String.format("%.02f", f);
             result.setText(formattedString);
             preview.setText("");
+        }
+    }
+
+    public void pos_n(View view) {
+        int pos = result.getSelectionEnd();
+        String num = result.getText().toString();
+        if (num.contains("+") || num.contains("-") || num.contains("/") || num.contains("*") || num.contains("%")){
+            result.setText(num + "(-");
+            result.setSelection(pos + 2);
+        }
+        else if(num.equals("")){
+            result.setText("(-");
+            result.setSelection(pos + 2);
+        }
+        else {
+            Double d = Double.parseDouble(num);
+            result.setText(-d + "");
+            result.setSelection(result.getText().toString().length());
         }
     }
 

@@ -259,7 +259,8 @@
                 android:layout_weight="1"
                 android:height="60dp"
                 android:text="+/-"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:onClick="pos_n" />
 
             <Button
                 android:id="@+id/equal"
