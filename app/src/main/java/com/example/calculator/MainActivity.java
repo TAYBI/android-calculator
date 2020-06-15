@@ -37,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
         preview.setText(result_);
     }
 
+    public void  print_slash(View view){
+        print("/");
+    }
+
+    public void  print_x(View view){
+        print("*");
+    }
 
     public void print_text(View view) {
         Button button = (Button)view;

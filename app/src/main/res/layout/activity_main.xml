@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:height="60dp"
-                android:onClick="print_text"
+                android:onClick="print_slash"
                 android:text="÷"
                 android:textColor="@color/colorAccent"
                 android:textSize="30sp" />
@@ -130,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:height="60dp"
-                android:onClick="print_text"
+                android:onClick="print_x"
                 android:text="x"
                 android:textColor="@color/colorAccent"
                 android:textSize="25sp" />
